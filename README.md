@@ -1,48 +1,55 @@
-# Les carnets du RAG — Masters M2 Industry 4.0 & Logistique/services
+# Les carnets du RAG — parcours complet M2 (9 h)
 
-Archive pédagogique contenant deux séances, chacune avec **1 h de cours et 2 h de TP**.
+Support étudiant pour les masters **Industry 4.0** et **Systèmes informatiques pour le génie de la logistique industrielle et des services**.
 
-## Contenu
+Le parcours comporte **3 séances × (1 h de cours + 2 h de TP)**. Chaque chapitre propose un volet vertical « Cours » et un volet vertical « TP · Atelier » ; le contenu s'ouvre horizontalement et l'interface est adaptée aux mobiles.
 
-- `index.html` : page d'accueil du parcours et navigation vers les deux cours
-- `cours1.html` : cours 1 avec accordéon vertical **Cours / TP** (pré-requis, tokens, embeddings, attention, Transformers, LLM, recherche)
-- `cours2.html` : cours 2 enrichi avec les **deux phases du RAG**, acquisition, nettoyage, chunking (5 méthodes), embeddings et indexation, FAISS/Chroma/Qdrant/pgvector, retrieval, top-k, prompt augmenté, génération et citations
-- `tp/TP1_recherche_semantique_Industrie_Logistique.ipynb` : recherche sémantique, embeddings, FAISS
-- `tp/TP2_RAG_complet_Industrie_Logistique.ipynb` : véritable pipeline RAG complet, génération locale avec Qwen2.5-0.5B-Instruct (téléchargement des poids requis)
-- `data/corpus_industrie_logistique.json` : corpus commun de **12 documents fictifs** et **12 questions annotées** pour les deux TP.
+## Fichiers
 
-## Mise en ligne sur cPanel
+- `index.html` — accueil et navigation entre les trois chapitres.
+- `cours1.html` — tokens, embeddings, attention, Transformers, encodeurs/décodeurs, LLM, principes du RAG.
+- `cours2.html` — ingestion, nettoyage, chunking (5 stratégies), indexation, FAISS / Chroma / Qdrant / pgvector, récupération, augmentation, génération, citations.
+- `cours3.html` — **évaluation et optimisation** : gold set, Precision@k, Recall@k, Hit@k, MRR, fidélité, recherche hybride BM25 + RRF, reranking, coût / latence et sécurité. Quatre interactions pédagogiques.
+- `tp/TP1_recherche_semantique_Industrie_Logistique.ipynb` — indexation et recherche sémantique.
+- `tp/TP2_RAG_complet_Industrie_Logistique.ipynb` — assistant RAG avec véritable génération via modèle ouvert Qwen2.5-0.5B-Instruct.
+- `tp/TP3_Evaluer_Optimiser_RAG_Industrie_Logistique.ipynb` — évaluation réelle de quatre configurations sur le corpus du module ; pas de clé API requise.
+- `data/corpus_industrie_logistique.json` — **12 documents fictifs** et **12 questions annotées** réutilisées dans les TP. Le TP3 contient en plus deux questions multisources et deux cas sans preuve.
+- `assets/architecture-rag.webp` — architecture complète du RAG.
+- `assets/strategies-chunking.webp` — comparatif des stratégies de chunking.
+- `assets/embeddings-bases-vectorielles.webp` — indexation et bases vectorielles.
 
-Décompresser **tous les fichiers** en gardant les sous-dossiers `tp/` et `data/` dans un répertoire du domaine, par exemple `public_html/rag/`. Ouvrir `https://<votre-domaine>/rag/index.html`.
+Les trois images sont des ressources locales incluses dans l'archive ; les schémas complémentaires du Cours 3 sont intégrés au HTML.
 
-L'interface HTML fonctionne sans backend ni base de données ; il n'y a pas de dépendance CSS/JS externe. Les contenus des simulations sont pédagogiques et s'exécutent directement dans le navigateur.
+## Déploiement statique : cPanel / GitHub Pages
 
-## Colab
+Copier **tous les fichiers et sous-dossiers** sans modifier la structure. Ouvrir `index.html`. Sur cPanel, le placer par exemple dans `public_html/rag/`. Pour GitHub Pages, activer **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-Dans chaque volet TP :
+Il n'y a ni backend ni base de données nécessaires pour le site. Les quatre simulations du Cours 3 fonctionnent hors ligne et leurs nombres fictifs sont explicitement identifiés.
 
-1. Télécharger le fichier `.ipynb` correspondant ;
-2. Cliquer sur **Ouvrir dans Google Colab** ;
-3. Dans Colab, importer/upload le notebook téléchargé.
+## Notebooks Colab
 
-Le lien du bouton Colab utilise **l'import**, et non un lien direct inexistant. Pour une ouverture directe après publication sur GitHub, renseigner `configuredColabNotebookUrl` dans le script HTML de la page concernée avec une URL vérifiée, par exemple `https://colab.research.google.com/github/<user>/<repo>/blob/<branch>/tp/<file>.ipynb`.
+Les notebooks sont téléchargeables depuis les panneaux TP. Après publication sur GitHub, les liens d'ouverture directe attendus sont :
 
-Le TP 2 requiert Internet pour installer ses dépendances et télécharger un modèle d'embeddings ainsi qu'un petit LLM ouvert. Un GPU Colab facilite l'exécution ; sur CPU, la génération est plus lente. Aucune clé d'API payante n'est requise.
+- TP1 : `https://colab.research.google.com/github/benlahmar/RAG_Cours_Ateliers/blob/main/tp/TP1_recherche_semantique_Industrie_Logistique.ipynb`
+- TP2 : `https://colab.research.google.com/github/benlahmar/RAG_Cours_Ateliers/blob/main/tp/TP2_RAG_complet_Industrie_Logistique.ipynb`
+- TP3 : `https://colab.research.google.com/github/benlahmar/RAG_Cours_Ateliers/blob/main/tp/TP3_Evaluer_Optimiser_RAG_Industrie_Logistique.ipynb`
 
-## Précautions
+**Attention :** tant que le TP3 n'est pas poussé sur GitHub, son URL Colab directe ne peut pas être utilisée. Vous pouvez télécharger le fichier `.ipynb` et l'importer manuellement dans Colab.
 
-Les procédures industrielles et logistiques, noms de documents, valeurs et exemples sont **fictifs**. Ils ne doivent pas guider des décisions de sécurité ou de pilotage de machines réelles. Une citation ne garantit pas que le LLM ait correctement interprété la source.
+Les TP exigent une connexion pour installer les bibliothèques et télécharger le modèle d'embeddings. L'exécution du TP2 télécharge également un LLM. Le TP3 n'exige pas de LLM pour ses mesures de retrieval ; son audit de fidélité est basé sur des affirmations annotées. Le rendu de résultats du TP3 dépend du modèle et de l'environnement d'exécution. Les performances réelles n'ont pas été pré-calculées dans cette archive.
 
-## Infographies originales du Cours 2
+## Précautions et limites
 
-Les trois illustrations sont incluses localement dans `assets/` en **WebP optimisé** (lecture et agrandissement) :
+Les procédures industrielles, valeurs, équipements et documents sont **fictifs**. Ne jamais les utiliser pour décider d'une opération de sécurité sur une installation réelle. Les metrics de retrieval et la fidélité de la génération sont deux objets distincts. Un jeu de 14 questions positives est **pédagogique** : il ne suffit pas pour une validation industrielle ou une démonstration statistique de supériorité.
 
-- `architecture-ragarchitecture-rag.webp` — indexation / interrogation ;
-- `strategies-chunkingstrategies-chunking.webp` — cinq méthodes ;
-- `embeddings-bases-vectoriellesembeddings-bases-vectorielles.webp` — corpus, vecteurs, top-k, moteurs vectoriels.
+## Publier la mise à jour sur un dépôt Git déjà cloné
 
-Cliquez sur une figure dans le cours pour l’ouvrir à sa taille complète. Aucun hébergeur d’images externe n’est nécessaire.
+Copier les fichiers de l'archive dans le dossier local du dépôt, puis :
 
-**Colab après push :** Les boutons des TP renvoient directement vers les notebooks de la branche `main`.
+```bash
+git add .
+git commit -m "Ajout cours 03 et TP 03 : évaluation et optimisation RAG"
+git push origin main
+```
 
-**Publication GitHub Pages (facultative) :** dans Settings > Pages, sélectionner « Deploy from a branch », puis la branche `main` et le répertoire `/(root)`.
+Ne pas exécuter `git init` dans un clone existant ; les scripts de publication fournis avec les archives précédentes visent le cas d'un dossier non encore initialisé.
