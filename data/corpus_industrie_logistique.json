@@ -194,5 +194,91 @@
         "LOG-06"
       ]
     }
+  ],
+  "questions_reformulees": [
+    {
+      "question": "Quelles informations noter quand un tapis roulant signale des secousses anormales ?",
+      "sources_attendues": [
+        "IND-01"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "À quel rythme relève-t-on les oscillations d’un entraînement électrique avant de les résumer ?",
+      "sources_attendues": [
+        "IND-02"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Que doit-on garder comme trace lorsqu’on étalonne une sonde thermique ?",
+      "sources_attendues": [
+        "IND-03"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Comment évaluer l’efficacité globale d’un équipement à partir de trois ratios ?",
+      "sources_attendues": [
+        "IND-04"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Peut-on se fier entièrement aux prévisions de défaillance produites par un algorithme ?",
+      "sources_attendues": [
+        "IND-05"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Comment remonter aux fabrications touchées par un défaut signalé ?",
+      "sources_attendues": [
+        "IND-06"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Que se passe-t-il si le nombre de colis déchargés ne correspond pas à ce qui était prévu ?",
+      "sources_attendues": [
+        "LOG-01"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Quels articles périssables faut-il expédier en premier ?",
+      "sources_attendues": [
+        "LOG-02"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Qui modifie l’affectation des portes d’expédition quand un poids lourd n’est pas à l’heure ?",
+      "sources_attendues": [
+        "LOG-03"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Comment compter les articles en rayonnage sans arrêter l’activité du site ?",
+      "sources_attendues": [
+        "LOG-04"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Vers quel outil se tourner quand un client signale un paquet abîmé ?",
+      "sources_attendues": [
+        "LOG-05"
+      ],
+      "type": "reformulation"
+    },
+    {
+      "question": "Un produit renvoyé par un acheteur est-il automatiquement revendu ?",
+      "sources_attendues": [
+        "LOG-06"
+      ],
+      "type": "reformulation"
+    }
   ]
 }
