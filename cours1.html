@@ -86,6 +86,14 @@ details{border-bottom:1px solid var(--line);padding:11px 0}details summary{curso
 @media print{.accordion-stage{display:block}.learning-pane{display:block}.pane-spine{display:none!important}.learning-pane .pane-content{display:block!important}.tp-editorial{padding:10px 15mm}.tp-cta .tp-actions{display:none}}
 @media(prefers-reduced-motion:reduce){.learning-pane{transition:none}}
 
+
+/* Guide d'atelier : accordéons pédagogiques, conservant la charte des carnets. */
+.tp-guide{margin:18px 0 30px}.tp-guide-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:22px 0 14px}.tp-guide-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);font-weight:750}.tp-guide-controls{display:flex;flex-wrap:wrap;gap:7px}.tp-guide-controls button,.tp-copy{border:1px solid var(--line);color:var(--ink2);background:var(--white);padding:7px 11px;border-radius:6px;font-size:12px;cursor:pointer}.tp-guide-controls button:hover,.tp-copy:hover{background:var(--paper2);border-color:var(--clay)}.tp-guide-list{display:grid;gap:10px}.tp-guide-item{border:1px solid var(--line);background:var(--white);border-radius:12px;overflow:hidden}.tp-guide-item[open]{border-color:color-mix(in srgb, var(--clay) 55%, var(--line));box-shadow:0 12px 27px rgba(30,42,34,.05)}.tp-guide-item summary{list-style:none;display:grid;grid-template-columns:44px minmax(0,1fr) 28px;align-items:center;gap:14px;min-height:82px;padding:14px 18px;cursor:pointer;background:var(--paper)}.tp-guide-item summary::-webkit-details-marker{display:none}.tp-guide-item summary:hover{background:var(--paper2)}.tp-guide-item[open] summary{border-bottom:1px solid var(--line)}.tp-guide-index{font:italic 28px Georgia,serif;color:var(--clay);text-align:center}.tp-guide-title{display:block;font:400 22px/1.25 Georgia,serif;color:var(--ink);margin-bottom:4px}.tp-guide-subtitle{display:block;font-size:12px;line-height:1.55;color:var(--muted)}.tp-guide-chevron{font-size:20px;color:var(--clay);transition:transform .2s}.tp-guide-item[open] .tp-guide-chevron{transform:rotate(45deg)}.tp-guide-body{padding:22px clamp(18px,3vw,34px) 24px}.tp-guide-body p{font-size:14px;color:var(--ink2);line-height:1.73;margin:0 0 13px}.tp-guide-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;margin-top:16px}.tp-guide-block{min-width:0}.tp-guide-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--clay);font-weight:800;margin-bottom:9px}.tp-code-wrap{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#eef0e9}.tp-code-top{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#e3e7de;border-bottom:1px solid #c9d3cb;padding:7px 11px;color:#4a6558;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.tp-code-wrap pre{background:#edf0ea;margin:0;padding:15px;overflow:auto;max-width:100%;font:12px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#233b33;tab-size:4;white-space:pre}.tp-code-wrap code{font:inherit}.tp-copy{padding:4px 8px;border-radius:4px;font-size:11px;color:#35564a}.tp-guide-note{background:var(--paper);border-left:2px solid var(--forest2);padding:14px 16px;border-radius:0 6px 6px 0;margin-bottom:15px}.tp-guide-note:last-child{margin-bottom:0}.tp-guide-note p{margin:0;font-size:13px}.tp-guide-note.discussion{border-left-color:var(--clay);background:color-mix(in srgb, var(--paper) 82%, #eadac4)}.tp-guide-stepmark{font-size:11px;color:var(--muted);margin:4px 0 0}.guide-linked-tools{font-size:12px;margin:15px 0 5px;padding:12px 15px;border:1px dashed var(--line);border-radius:7px;color:var(--ink2)}.guide-linked-tools a{font-weight:750}.dark .tp-code-wrap pre{background:#1e2e29;color:#dfecdf}.dark .tp-code-wrap,.dark .tp-code-top{background:#2b4137;color:#dfecdf;border-color:#43564c}.dark .tp-copy{background:#29443a;color:#dfecdf}
+@media(max-width:780px){.tp-guide-grid{grid-template-columns:1fr}.tp-guide-item summary{grid-template-columns:35px minmax(0,1fr) 21px;gap:9px;padding:12px}.tp-guide-title{font-size:19px}.tp-guide-body{padding:17px}.tp-code-wrap pre{font-size:11px}.tp-guide-item summary .tp-guide-index{font-size:24px}}
+@media print{.tp-guide-item{break-inside:avoid}.tp-guide-item .tp-guide-body{display:block!important}.tp-guide-controls,.tp-copy{display:none!important}}
+@media(prefers-reduced-motion:reduce){.tp-guide-chevron{transition:none}}
+
+.tp-outils-link{border:1px solid var(--line);border-radius:4px;padding:5px 11px;color:var(--ink2);text-decoration:none;font-size:12px;font-weight:750;white-space:nowrap}.tp-outils-link:hover{border-color:var(--clay);color:var(--clay)}@media(max-width:650px){.tp-outils-link{padding:5px 7px;font-size:11px}}
 </style>
 </head>
 <body>
@@ -95,7 +103,7 @@ details{border-bottom:1px solid var(--line);padding:11px 0}details summary{curso
  <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Ouvrir le sommaire" aria-controls="navigation" aria-expanded="false">☰</button>
  <a class="mark" href="#main-title"><span class="mark-symbol" aria-hidden="true">∴</span><span class="mark-name">Les carnets du RAG</span></a>
  <span class="course-kicker">Intelligence documentaire · Cours 01 / 03</span><div class="top-spacer"></div>
- <div class="tools">
+ <div class="tools"><a class="tp-outils-link" href="outils.html" title="Atlas des outils du RAG">Outils ↗</a>
   <button class="icon-btn" id="searchBtn" title="Chercher dans le cours (Ctrl+K)" aria-label="Rechercher">⌕</button>
   <button class="icon-btn" id="textDown" title="Diminuer la taille du texte" aria-label="Réduire le texte">A−</button>
   <button class="icon-btn" id="textUp" title="Augmenter la taille du texte" aria-label="Agrandir le texte">A+</button>
@@ -284,16 +292,88 @@ details{border-bottom:1px solid var(--line);padding:11px 0}details summary{curso
     </div>
     <p class="tp-instruction" id="colabHelp"><strong>Première utilisation :</strong> téléchargez le notebook, cliquez sur « Ouvrir dans Google Colab », puis dans Colab choisissez <strong>Importer / Upload</strong> et sélectionnez le fichier <code>TP1_recherche_semantique_Industrie_Logistique.ipynb</code>. <strong>Un lien direct sera possible après publication du notebook sur GitHub.</strong></p>
   </div>
-  <h3 class="overline" style="font-size:12px;margin:42px 0 7px">Déroulé de l'atelier · 120 minutes</h3>
-  <ol class="tp-steps">
-    <li><div><h4>Préparer l'environnement</h4><p>Installer les bibliothèques et vérifier le noyau Python ; comprendre pourquoi aucun LLM n'est requis.</p></div><span class="tp-time">10 min</span></li>
-    <li><div><h4>Explorer deux corpus métiers</h4><p>Parcourir six documents industriels et six documents logistiques fictifs ; analyser les métadonnées et sources attendues.</p></div><span class="tp-time">15 min</span></li>
-    <li><div><h4>Comprendre le cosinus</h4><p>Calculer et interpréter la similarité entre vecteurs, puis identifier ses limites.</p></div><span class="tp-time">20 min</span></li>
-    <li><div><h4>Découper et vectoriser</h4><p>Comparer les chunks, encoder les passages avec un modèle multilingue et observer les dimensions vectorielles.</p></div><span class="tp-time">30 min</span></li>
-    <li><div><h4>Indexer et interroger FAISS</h4><p>Écrire une fonction de recherche top-k, comparer le classement de requêtes industrielles et logistiques.</p></div><span class="tp-time">20 min</span></li>
-    <li><div><h4>Évaluer les résultats</h4><p>Calculer Hit@k et Recall@k moyen sur douze questions dont les sources attendues sont connues.</p></div><span class="tp-time">15 min</span></li>
-    <li><div><h4>Expérimenter et interpréter</h4><p>Modifier les paramètres de découpage et expliquer les différences observées dans les résultats.</p></div><span class="tp-time">10 min</span></li>
-  </ol>
+  <h3 class="overline" style="font-size:12px;margin:42px 0 7px">Atelier guidé · manipulations et discussion</h3>
+  <section class="tp-guide" aria-label="Étapes guidées de cours1.html atelier 1">
+<div class="tp-guide-tools"><span class="tp-guide-kicker">Dépliez une étape pour explorer le code et le raisonnement</span><div class="tp-guide-controls"><button type="button" data-guide-action="open">Tout déplier</button><button type="button" data-guide-action="close">Tout replier</button></div></div>
+<div class="tp-guide-list">
+<details class="tp-guide-item" open>
+<summary><span class="tp-guide-index">01</span><span><strong class="tp-guide-title">Préparer l&#x27;environnement</strong><span class="tp-guide-subtitle">Installer les bibliothèques et vérifier le noyau Python ; comprendre pourquoi aucun LLM n&#x27;est requis.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Installer un environnement reproductible et comprendre pourquoi la recherche documentaire ne nécessite pas encore de modèle génératif.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>%pip -q install &#x27;sentence-transformers&gt;=3,&lt;6&#x27; &#x27;faiss-cpu&gt;=1.8&#x27; numpy pandas matplotlib
+import sys
+print(&#x27;Python :&#x27;, sys.version.split()[0])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Vérifier que les bibliothèques s&#x27;importent ; distinguer le modèle d&#x27;embeddings, qui encode des textes, du LLM, qui génère des réponses.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Que devient la reproductibilité si deux étudiants utilisent des versions différentes de bibliothèques ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">02</span><span><strong class="tp-guide-title">Explorer deux corpus métiers</strong><span class="tp-guide-subtitle">Parcourir six documents industriels et six documents logistiques fictifs ; analyser les métadonnées et sources attendues.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Identifier la structure du corpus commun et la provenance de chaque document avant toute vectorisation.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>documents = DATA[&#x27;documents&#x27;]
+questions = DATA[&#x27;questions&#x27;]
+print(&#x27;Documents :&#x27;, len(documents))
+for doc in documents[:3]:
+    print(doc[&#x27;id&#x27;], doc[&#x27;domaine&#x27;], doc[&#x27;titre&#x27;])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Repérer les identifiants IND-xx et LOG-xx ; les documents fictifs Industry 4.0 et logistique doivent rester distinguables dans les résultats.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Pourquoi conserver l&#x27;identifiant et le domaine dans les chunks plutôt que le seul texte ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">03</span><span><strong class="tp-guide-title">Comprendre le cosinus</strong><span class="tp-guide-subtitle">Calculer et interpréter la similarité entre vecteurs, puis identifier ses limites.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Retrouver le sens géométrique de la similarité cosinus avant d&#x27;utiliser un moteur vectoriel.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>import numpy as np
+print(&#x27;Même direction :&#x27;, cosinus([1, 0], [2, 0]))
+print(&#x27;Orthogonaux :&#x27;, cosinus([1, 0], [0, 1]))
+print(&#x27;Opposés :&#x27;, cosinus([1, 0], [-1, 0]))</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>La similarité dépend de l&#x27;angle, pas de la longueur des vecteurs. Le score n&#x27;évalue ni la vérité ni l&#x27;actualité d&#x27;une procédure.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Deux passages peuvent-ils être proches sémantiquement tout en prescrivant des actions contradictoires ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">04</span><span><strong class="tp-guide-title">Découper et vectoriser</strong><span class="tp-guide-subtitle">Comparer les chunks, encoder les passages avec un modèle multilingue et observer les dimensions vectorielles.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Comparer plusieurs tailles de segments et obtenir une matrice d&#x27;embeddings réutilisable pour la recherche.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>chunks = construire_chunks(documents, taille=55, recouvrement=12)
+textes = [c[&#x27;titre&#x27;] + &#x27; — &#x27; + c[&#x27;texte&#x27;] for c in chunks]
+E = np.asarray(encodeur.encode(textes,
+                  normalize_embeddings=True), dtype=&#x27;float32&#x27;)
+print(&#x27;Dimensions :&#x27;, E.shape)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Chaque ligne de E représente un chunk, pas une formation complète. Le recouvrement limite les coupures de contexte mais peut produire des doublons.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Que perd-on avec des chunks très petits ? Que risque-t-on avec des chunks trop longs ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">05</span><span><strong class="tp-guide-title">Indexer et interroger FAISS</strong><span class="tp-guide-subtitle">Écrire une fonction de recherche top-k, comparer le classement de requêtes industrielles et logistiques.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Construire un index FAISS et examiner les passages retrouvés, leur score et leur provenance documentaire.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>index = indexer(E)
+question = &#x27;Que prévoit la procédure après une alarme VB-04 ?&#x27;
+for passage in chercher(question, top_k=3):
+    print(passage[&#x27;doc_id&#x27;], round(passage[&#x27;score&#x27;], 3),
+          passage[&#x27;texte&#x27;][:90])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Le top-3 est un classement de similarité : ne pas présenter le premier score comme une probabilité de vérité.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Pourquoi plusieurs chunks issus d&#x27;un même document peuvent-ils apparaître dans un top-k ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">06</span><span><strong class="tp-guide-title">Évaluer les résultats</strong><span class="tp-guide-subtitle">Calculer Hit@k et Recall@k moyen sur douze questions dont les sources attendues sont connues.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Mesurer la récupération à l&#x27;aide de questions dont les documents attendus ont été annotés.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>for k in (1, 3, 5):
+    scores = [hit_at_k(q, k=k) for q in questions]
+    print(f&#x27;Hit@{k} moyen : {np.mean(scores):.1%}&#x27;)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Un Hit@k réussi indique qu&#x27;au moins une source attendue a été retrouvée ; il ne garantit pas que toutes les sources nécessaires soient présentes.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Dans quel cas préférer Recall@k à Hit@k pour une question nécessitant plusieurs documents ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">07</span><span><strong class="tp-guide-title">Expérimenter et interpréter</strong><span class="tp-guide-subtitle">Modifier les paramètres de découpage et expliquer les différences observées dans les résultats.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Faire varier une seule famille de paramètres pour expliquer les changements de performance.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>for taille, recouvrement in [(30, 8), (55, 12), (90, 15)]:
+    segments = construire_chunks(documents, taille, recouvrement)
+    print(taille, recouvrement, &#x27;→&#x27;, len(segments), &#x27;chunks&#x27;)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Comparer volume de l&#x27;index, cohérence des passages et résultats de recherche ; réencoder et réindexer avant de comparer les scores des variantes.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Comment formuler une conclusion fondée sur les données et non sur une seule question réussie ?</p></div></div></div></div></details>
+</div><div class="guide-linked-tools">Besoin de comprendre une bibliothèque ? <a href="outils.html">Consultez l’atlas des outils du RAG →</a></div></section>
   <div class="tp-two-col">
     <div class="tp-brief"><strong>Terrain A · Industrie 4.0</strong><p>Alarmes de convoyeurs, vibration moteur, calibration, TRS et traçabilité documentaire.</p></div>
     <div class="tp-brief"><strong>Terrain B · Logistique et services</strong><p>Réceptions, politique FEFO, créneaux de quai, WMS, incidents de livraison et retours.</p></div>
@@ -377,6 +457,27 @@ function renderChunks(){const words=corpus.split(/\s+/),size=Number($('#chunkSiz
 const quiz={q1:{correct:'b',note:'Un modèle d’embeddings documentaire peut être entraîné spécialement pour rapprocher questions et passages ; le LLM peut utiliser une architecture générative distincte.'},q2:{correct:'a',note:'La comparaison QKᵀ fournit des scores ; on les divise par √dₖ, puis softmax crée des poids normalisés utilisés pour agréger V.'},q3:{correct:'b',note:'Un décodeur autoregressif prédit le token suivant à partir des tokens déjà disponibles ; un masque causal interdit l’accès aux tokens futurs de la même sortie.'},q4:{correct:'a',note:'Le LLM reçoit des passages de texte, avec la question et les instructions. Les vecteurs servent surtout à retrouver les passages dans l’index.'},q5:{correct:'b',note:'Une mesure à un instant précis doit provenir d’une source autorisée et horodatée, par exemple une base de séries temporelles ou une API de supervision.'}};
 $('#quizForm').addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;for(const [name,item] of Object.entries(quiz)){const v=$('input[name="'+name+'"]:checked')?.value;const r=$('#'+name+'Response');const ok=v===item.correct;if(v)answered++;if(ok)score++;r.classList.add('show');r.textContent=(v?(ok?'✓ Bonne réponse. ':'✕ Réponse à corriger. '):'Question non renseignée. ')+item.note}$('#quizResult').textContent='Résultat : '+score+' / 5 · '+answered+' question(s) renseignée(s). '+(score===5?'Les fondements sont acquis : vous pouvez passer au TP 1.':'Reprenez les explications des questions concernées.')});
 $('#quizReset').addEventListener('click',()=>{$('#quizForm').reset();$$('.quiz-response').forEach(x=>{x.classList.remove('show');x.textContent=''});$('#quizResult').textContent=''});
+})();
+</script>
+<script>
+(function(){
+  document.addEventListener('click',async function(ev){
+    const toggle=ev.target.closest('[data-guide-action]');
+    if(toggle){
+      const guide=toggle.closest('.tp-guide');
+      if(!guide)return;
+      const open=toggle.dataset.guideAction==='open';
+      guide.querySelectorAll('details.tp-guide-item').forEach(d=>d.open=open);
+      return;
+    }
+    const copy=ev.target.closest('.tp-copy');
+    if(!copy)return;
+    const pre=copy.closest('.tp-code-wrap')?.querySelector('code');
+    if(!pre)return;
+    try{await navigator.clipboard.writeText(pre.textContent);copy.textContent='Copié ✓'}
+    catch(e){copy.textContent='Sélectionnez le code pour copier'}
+    setTimeout(()=>{copy.textContent='Copier'},1500);
+  });
 })();
 </script>
 </body>

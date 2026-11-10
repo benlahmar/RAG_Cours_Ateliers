@@ -108,13 +108,35 @@ details{border-bottom:1px solid var(--line);padding:11px 0}details summary{curso
 .chunk-demo .explain{font-size:.87em;color:var(--ink2);margin-top:7px}
 .rag-caption-warning{font-size:.8em;color:var(--muted);margin:-10px 0 20px}
 @media(max-width:680px){.rag-infographie a:after{position:static;display:block;text-align:center}.editorial-table{font-size:.75em}.editorial-table th,.editorial-table td{padding:6px}}
+
+/* Atelier 2 — Choix de parcours A/B dans le panneau TP : cohérent avec le carnet éditorial */
+.atelier-switch{display:flex;gap:9px;align-items:stretch;flex-wrap:wrap;margin:25px 0 20px}
+.atelier-switch button{flex:1 1 220px;text-align:left;padding:13px 17px;border:1px solid var(--line);color:var(--ink2);background:var(--paper);font-size:13px;font-weight:760;line-height:1.4}
+.atelier-switch button[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.atelier-panel[hidden]{display:none!important}
+.atelier-intro{font-size:13px;color:var(--ink2);border-left:3px solid var(--forest2);padding:10px 15px;margin:15px 0;background:var(--paper)}
+.tp-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:22px 0}
+.tp-stack > div{border:1px solid var(--line);padding:17px;background:var(--paper)}
+.tp-stack strong{display:block;color:var(--forest);font-size:15px;margin-bottom:7px}
+.tp-stack p{font-size:13px;color:var(--ink2);line-height:1.6;margin:0}
+.dark .tp-stack strong{color:var(--ink)}
+@media(max-width:650px){.tp-stack{grid-template-columns:1fr}.atelier-switch button{flex-basis:100%}}
+
+/* Guide d'atelier : accordéons pédagogiques, conservant la charte des carnets. */
+.tp-guide{margin:18px 0 30px}.tp-guide-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:22px 0 14px}.tp-guide-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);font-weight:750}.tp-guide-controls{display:flex;flex-wrap:wrap;gap:7px}.tp-guide-controls button,.tp-copy{border:1px solid var(--line);color:var(--ink2);background:var(--white);padding:7px 11px;border-radius:6px;font-size:12px;cursor:pointer}.tp-guide-controls button:hover,.tp-copy:hover{background:var(--paper2);border-color:var(--clay)}.tp-guide-list{display:grid;gap:10px}.tp-guide-item{border:1px solid var(--line);background:var(--white);border-radius:12px;overflow:hidden}.tp-guide-item[open]{border-color:color-mix(in srgb, var(--clay) 55%, var(--line));box-shadow:0 12px 27px rgba(30,42,34,.05)}.tp-guide-item summary{list-style:none;display:grid;grid-template-columns:44px minmax(0,1fr) 28px;align-items:center;gap:14px;min-height:82px;padding:14px 18px;cursor:pointer;background:var(--paper)}.tp-guide-item summary::-webkit-details-marker{display:none}.tp-guide-item summary:hover{background:var(--paper2)}.tp-guide-item[open] summary{border-bottom:1px solid var(--line)}.tp-guide-index{font:italic 28px Georgia,serif;color:var(--clay);text-align:center}.tp-guide-title{display:block;font:400 22px/1.25 Georgia,serif;color:var(--ink);margin-bottom:4px}.tp-guide-subtitle{display:block;font-size:12px;line-height:1.55;color:var(--muted)}.tp-guide-chevron{font-size:20px;color:var(--clay);transition:transform .2s}.tp-guide-item[open] .tp-guide-chevron{transform:rotate(45deg)}.tp-guide-body{padding:22px clamp(18px,3vw,34px) 24px}.tp-guide-body p{font-size:14px;color:var(--ink2);line-height:1.73;margin:0 0 13px}.tp-guide-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;margin-top:16px}.tp-guide-block{min-width:0}.tp-guide-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--clay);font-weight:800;margin-bottom:9px}.tp-code-wrap{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#eef0e9}.tp-code-top{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#e3e7de;border-bottom:1px solid #c9d3cb;padding:7px 11px;color:#4a6558;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.tp-code-wrap pre{background:#edf0ea;margin:0;padding:15px;overflow:auto;max-width:100%;font:12px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#233b33;tab-size:4;white-space:pre}.tp-code-wrap code{font:inherit}.tp-copy{padding:4px 8px;border-radius:4px;font-size:11px;color:#35564a}.tp-guide-note{background:var(--paper);border-left:2px solid var(--forest2);padding:14px 16px;border-radius:0 6px 6px 0;margin-bottom:15px}.tp-guide-note:last-child{margin-bottom:0}.tp-guide-note p{margin:0;font-size:13px}.tp-guide-note.discussion{border-left-color:var(--clay);background:color-mix(in srgb, var(--paper) 82%, #eadac4)}.tp-guide-stepmark{font-size:11px;color:var(--muted);margin:4px 0 0}.guide-linked-tools{font-size:12px;margin:15px 0 5px;padding:12px 15px;border:1px dashed var(--line);border-radius:7px;color:var(--ink2)}.guide-linked-tools a{font-weight:750}.dark .tp-code-wrap pre{background:#1e2e29;color:#dfecdf}.dark .tp-code-wrap,.dark .tp-code-top{background:#2b4137;color:#dfecdf;border-color:#43564c}.dark .tp-copy{background:#29443a;color:#dfecdf}
+@media(max-width:780px){.tp-guide-grid{grid-template-columns:1fr}.tp-guide-item summary{grid-template-columns:35px minmax(0,1fr) 21px;gap:9px;padding:12px}.tp-guide-title{font-size:19px}.tp-guide-body{padding:17px}.tp-code-wrap pre{font-size:11px}.tp-guide-item summary .tp-guide-index{font-size:24px}}
+@media print{.tp-guide-item{break-inside:avoid}.tp-guide-item .tp-guide-body{display:block!important}.tp-guide-controls,.tp-copy{display:none!important}}
+@media(prefers-reduced-motion:reduce){.tp-guide-chevron{transition:none}}
+
+.tp-outils-link{border:1px solid var(--line);border-radius:4px;padding:5px 11px;color:var(--ink2);text-decoration:none;font-size:12px;font-weight:750;white-space:nowrap}.tp-outils-link:hover{border-color:var(--clay);color:var(--clay)}@media(max-width:650px){.tp-outils-link{padding:5px 7px;font-size:11px}}
+@media(max-width:650px){.editorial-table{display:block;max-width:100%;overflow-x:auto}}
 </style></head><body>
 <a href="#contenu" class="skip">Aller au contenu du cours</a><div class="progress" aria-hidden="true"><span id="readBar"></span></div>
 <header class="top"><div class="top-inner">
 <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Ouvrir le sommaire" aria-controls="navigation" aria-expanded="false">☰</button>
 <a class="mark" href="index.html" aria-label="Accueil des carnets du RAG"><span class="mark-symbol" aria-hidden="true">∴</span><span class="mark-name">Les carnets du RAG</span></a>
 <span class="course-kicker">Intelligence documentaire · Cours 02 / 03</span><div class="top-spacer"></div>
-<div class="tools"><button class="icon-btn" id="searchBtn" title="Chercher dans le cours (Ctrl+K)" aria-label="Rechercher">⌕</button><button class="icon-btn" id="textDown" title="Diminuer la taille du texte" aria-label="Réduire le texte">A−</button><button class="icon-btn" id="textUp" title="Augmenter la taille du texte" aria-label="Agrandir le texte">A+</button><button class="icon-btn" id="themeBtn" title="Changer le thème" aria-label="Changer le thème">◐</button><span class="tool-sep"></span><button class="pill-btn" id="focusBtn" aria-pressed="false">Lecture concentrée</button><button class="pill-btn" id="printBtn">Imprimer</button></div></div></header>
+<div class="tools"><a class="tp-outils-link" href="outils.html" title="Atlas des outils du RAG">Outils ↗</a><button class="icon-btn" id="searchBtn" title="Chercher dans le cours (Ctrl+K)" aria-label="Rechercher">⌕</button><button class="icon-btn" id="textDown" title="Diminuer la taille du texte" aria-label="Réduire le texte">A−</button><button class="icon-btn" id="textUp" title="Augmenter la taille du texte" aria-label="Agrandir le texte">A+</button><button class="icon-btn" id="themeBtn" title="Changer le thème" aria-label="Changer le thème">◐</button><span class="tool-sep"></span><button class="pill-btn" id="focusBtn" aria-pressed="false">Lecture concentrée</button><button class="pill-btn" id="printBtn">Imprimer</button></div></div></header>
 <div class="accordion-stage" id="courseTpAccordion" aria-label="Sections du module : Cours et TP">
 <section class="learning-pane learning-pane--cours is-active" id="coursPane" data-pane="cours"><button class="pane-spine" type="button" id="toggleCours" aria-controls="coursContent" aria-expanded="true" aria-label="Afficher le cours"><span class="pane-id">01</span><span class="pane-label">Cours</span><span class="pane-control" aria-hidden="true"></span></button>
 <div class="pane-content" id="coursContent"><div class="grid-shell"><aside class="left" id="navigation" aria-label="Sommaire du cours"><div class="left-sticky">
@@ -303,23 +325,171 @@ details{border-bottom:1px solid var(--line);padding:11px 0}details summary{curso
 <button class="pane-spine" type="button" id="toggleTp" aria-controls="tpContent" aria-expanded="false" aria-label="Afficher le TP 2"><span class="pane-id">02</span><span class="pane-label">TP · Atelier</span><span class="pane-control" aria-hidden="true"></span></button>
 <div class="pane-content" id="tpContent"><article class="tp-editorial" aria-labelledby="tp-title">
 <div class="tp-masthead"><span class="tp-eyebrow">Les carnets du RAG · Atelier 02</span><span class="folio-number">TP</span></div><header class="tp-head"><div class="overline">Master 2 · Industrie 4.0 et logistique / services</div><h2 id="tp-title">Construire un assistant RAG qui cite ses documents.</h2>
-<p class="tp-lede">À partir du corpus déjà utilisé au TP 1, assembler une chaîne complète : récupérer les documents, construire un prompt documenté, générer une réponse avec un LLM ouvert et vérifier ses références.</p>
-<div class="tp-strip"><span class="chip accent">Durée · 2 h</span><span class="chip">Python / Colab</span><span class="chip">Sentence Transformers / FAISS</span><span class="chip">Qwen2.5-0.5B-Instruct</span><span class="chip">Sans clé API</span></div></header>
+<p class="tp-lede">Deux parcours complémentaires : <strong>Atelier A — FAISS</strong> pour assembler le premier RAG, puis <strong>Atelier B — Qdrant + Ollama</strong> pour étudier l'indexation, les métadonnées et le passage à une architecture serveur. Les exemples sont adaptés aux deux masters.</p>
+<div class="tp-strip"><span class="chip accent">Durée · 2 h</span><span class="chip">Python / Colab</span><span class="chip">FAISS / Qdrant</span><span class="chip">Qwen / Ollama local</span><span class="chip">Sans clé API</span></div></header>
+<nav class="atelier-switch" role="tablist" aria-label="Choisir un atelier du TP 2">
+<button type="button" role="tab" id="tabAtelierA" aria-selected="true" aria-controls="atelierA" data-atelier="a">A / FAISS · TP obligatoire (2 h)</button>
+<button type="button" role="tab" id="tabAtelierB" aria-selected="false" aria-controls="atelierB" data-atelier="b">B / Qdrant + Ollama · Approfondissement</button>
+</nav>
+<section class="atelier-panel" id="atelierA" role="tabpanel" aria-labelledby="tabAtelierA">
 <div class="tp-cta"><div class="overline" style="margin-bottom:8px">Le carnet de travail</div><h3>Notebook Jupyter — TP 02</h3><p>Notebook autonome : 12 documents fictifs, fonctions de recherche, construction du prompt, véritable génération et contrôle des citations. La première exécution télécharge les modèles.</p>
 <div class="tp-actions"><a class="download-link" href="tp/TP2_RAG_complet_Industrie_Logistique.ipynb" download>↓ Télécharger le notebook (.ipynb)</a><a class="colab-link" id="colabLaunch" href="https://colab.research.google.com/#upload" target="_blank" rel="noopener noreferrer">↗ Ouvrir dans Google Colab</a></div>
 <p class="tp-instruction" id="colabHelp"><strong>Utilisation :</strong> téléchargez le notebook puis ouvrez Colab et importez le fichier <code>TP2_RAG_complet_Industrie_Logistique.ipynb</code>. Le lien d'ouverture directe pourra être configuré après la mise en ligne du notebook dans un dépôt accessible. <strong>Conseil :</strong> activer un GPU T4 si disponible, sinon la génération sur CPU est possible mais plus lente.</p></div>
-<h3 class="overline" style="font-size:12px;margin:42px 0 7px">Déroulé de l'atelier · 120 minutes</h3>
-<ol class="tp-steps">
-<li><div><h4>Préparer Colab</h4><p>Installer les dépendances, comprendre la différence entre l'encodeur documentaire et le LLM génératif.</p></div><span class="tp-time">10 min</span></li>
-<li><div><h4>Réutiliser le corpus du TP 1</h4><p>Explorer les fiches fictives PR-17, VIB-M12, FEFO, WMS/TMS et leurs identifiants.</p></div><span class="tp-time">15 min</span></li>
-<li><div><h4>Inspecter le retriever</h4><p>Indexer les passages, comparer le top-k et vérifier les textes réellement fournis.</p></div><span class="tp-time">20 min</span></li>
-<li><div><h4>Construire le prompt augmenté</h4><p>Assembler les instructions, la question et les passages identifiés ; prévoir l'abstention.</p></div><span class="tp-time">20 min</span></li>
-<li><div><h4>Connecter un LLM</h4><p>Charger un modèle ouvert, produire une réponse avec RAG et comparer avec la génération sans documents.</p></div><span class="tp-time">30 min</span></li>
-<li><div><h4>Vérifier les citations et tester l'absence</h4><p>Comparer les assertions aux sources puis essayer une question sans preuve documentaire.</p></div><span class="tp-time">15 min</span></li>
-<li><div><h4>Expliquer les résultats</h4><p>Calculer Hit@k, justifier une limite et proposer une amélioration vérifiable.</p></div><span class="tp-time">10 min</span></li></ol>
+<h3 class="overline" style="font-size:12px;margin:42px 0 7px">Atelier guidé · manipulations et discussion</h3>
+<section class="tp-guide" aria-label="Étapes guidées de cours2.html atelier 1">
+<div class="tp-guide-tools"><span class="tp-guide-kicker">Dépliez une étape pour explorer le code et le raisonnement</span><div class="tp-guide-controls"><button type="button" data-guide-action="open">Tout déplier</button><button type="button" data-guide-action="close">Tout replier</button></div></div>
+<div class="tp-guide-list">
+<details class="tp-guide-item" open>
+<summary><span class="tp-guide-index">01</span><span><strong class="tp-guide-title">Préparer Colab</strong><span class="tp-guide-subtitle">Installer les dépendances, comprendre la différence entre l&#x27;encodeur documentaire et le LLM génératif.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Préparer le notebook complet : deux modèles ont deux fonctions différentes, retrieval et génération.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>%pip -q install &#x27;sentence-transformers&gt;=3,&lt;6&#x27; &#x27;faiss-cpu&gt;=1.8&#x27; &#x27;transformers&gt;=4.45,&lt;5&#x27; &#x27;accelerate&gt;=1,&lt;2&#x27; pandas numpy
+import torch
+print(&#x27;GPU disponible :&#x27;, torch.cuda.is_available())</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>L&#x27;embedding peut fonctionner sur CPU ; le chargement d&#x27;un petit LLM sur GPU accélère la génération sans être obligatoire.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Que se passe-t-il si l&#x27;on confond modèle d&#x27;encodage et modèle génératif ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">02</span><span><strong class="tp-guide-title">Réutiliser le corpus du TP 1</strong><span class="tp-guide-subtitle">Explorer les fiches fictives PR-17, VIB-M12, FEFO, WMS/TMS et leurs identifiants.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Retrouver exactement les sources déjà utilisées au TP 1 afin de comparer les systèmes à données constantes.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>documents = DATA[&#x27;documents&#x27;]
+print(&#x27;Nombre de fiches :&#x27;, len(documents))
+print([(d[&#x27;id&#x27;], d[&#x27;titre&#x27;]) for d in documents[:4]])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Vérifier les identifiants PR-17, VB-04, FEFO, WMS/TMS dans les contenus pertinents, sans les inventer dans les réponses.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Pourquoi le corpus doit-il rester inchangé lorsque l&#x27;on évalue l&#x27;effet du LLM ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">03</span><span><strong class="tp-guide-title">Inspecter le retriever</strong><span class="tp-guide-subtitle">Indexer les passages, comparer le top-k et vérifier les textes réellement fournis.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Inspecter la qualité des passages transmis au LLM avant de demander une réponse.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>question_test = &#x27;Que prévoit la procédure PR-17 après une alarme VB-04 ?&#x27;
+for k in (1, 3, 5):
+    r = rechercher(question_test, k=k)
+    print(k, [(x[&#x27;id&#x27;], round(x[&#x27;score&#x27;], 3)) for x in r])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Une même question peut avoir des sources différentes selon k ; une source pertinente mais absente du contexte ne pourra pas être citée par le modèle.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Quel est le compromis entre un contexte trop petit et un contexte contenant du bruit ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">04</span><span><strong class="tp-guide-title">Construire le prompt augmenté</strong><span class="tp-guide-subtitle">Assembler les instructions, la question et les passages identifiés ; prévoir l&#x27;abstention.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Construire un prompt augmenté séparant instructions, question et documents de référence.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>passages = rechercher(question_test, k=3)
+prompt = construire_prompt(question_test, passages)
+print(prompt[:1800])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Le contexte doit conserver les identifiants [IND-xx]/[LOG-xx]. Les documents récupérés restent des données : ils ne doivent pas redéfinir les règles du système.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Comment écrire une instruction d&#x27;abstention lorsqu&#x27;une valeur n&#x27;est pas présente dans les passages ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">05</span><span><strong class="tp-guide-title">Connecter un LLM</strong><span class="tp-guide-subtitle">Charger un modèle ouvert, produire une réponse avec RAG et comparer avec la génération sans documents.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Produire deux réponses avec le même modèle : l&#x27;une avec documents, l&#x27;autre sans contexte.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>reponse_rag = generer(question_test, passages, max_new_tokens=170)
+reponse_sans_docs = generer(question_test, None, max_new_tokens=170)
+print(&#x27;AVEC SOURCES :&#x27;, reponse_rag)
+print(&#x27;SANS SOURCES :&#x27;, reponse_sans_docs)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Comparer des faits précis, pas seulement la fluidité. Un texte convaincant sans source ne constitue pas une preuve.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>La génération avec retrieval peut-elle rester incorrecte si le passage récupéré est mauvais ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">06</span><span><strong class="tp-guide-title">Vérifier les citations et tester l&#x27;absence</strong><span class="tp-guide-subtitle">Comparer les assertions aux sources puis essayer une question sans preuve documentaire.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Vérifier les références et tester volontairement une question sans information disponible.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>print(verifier_references(reponse_rag, passages))
+question_absente = &#x27;Combien de palettes sont réellement en stock maintenant ?&#x27;
+print(generer(question_absente, rechercher(question_absente, 3)))</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Le contrôle des références vérifie leur présence, pas l&#x27;exactitude de chaque affirmation. Une question d&#x27;état réel doit conduire à une abstention si aucune mesure n&#x27;est fournie.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Comment distinguer citation existante, citation pertinente et affirmation effectivement étayée ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">07</span><span><strong class="tp-guide-title">Expliquer les résultats</strong><span class="tp-guide-subtitle">Calculer Hit@k, justifier une limite et proposer une amélioration vérifiable.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Relier observations et métriques du retriever pour proposer une amélioration testable.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>for k in (1, 3, 5):
+    score = np.mean([hit_at_k(q, k) for q in DATA[&#x27;questions&#x27;]])
+    print(f&#x27;Hit@{k} = {score:.1%}&#x27;)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Comparer au moins une question réussie, une erreur de retrieval et une erreur possible de génération.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Quelle expérience isolerait l&#x27;effet de k, sans changer simultanément le modèle et le corpus ?</p></div></div></div></div></details>
+</div><div class="guide-linked-tools">Besoin de comprendre une bibliothèque ? <a href="outils.html">Consultez l’atlas des outils du RAG →</a></div></section>
 <div class="tp-two-col"><div class="tp-brief"><strong>Terrain A · Industrie 4.0</strong><p>Répondre à propos de l'alarme VB-04 sans inventer de seuil de sécurité ou de mesure actuelle.</p></div><div class="tp-brief"><strong>Terrain B · Logistique et services</strong><p>Expliquer FEFO, l'inventaire et les incidents, sans confondre politique documentaire et état du WMS.</p></div></div>
 <div class="note hint"><b>Expérience déterminante.</b> Si le LLM produit une citation, vérifiez : le document a-t-il été retrouvé ? Le passage contient-il vraiment l'information affirmée ? Une référence seule n'est pas une preuve de fidélité.</div>
 <p class="tp-aside"><strong>Livrable :</strong> notebook exécuté et court compte rendu : deux cas métier, comparaison avec/sans RAG, cas sans réponse et recommandation technique.</p>
+</section>
+<section class="atelier-panel" id="atelierB" role="tabpanel" aria-labelledby="tabAtelierB" hidden>
+<div class="tp-cta"><div class="overline" style="margin-bottom:8px">Parcours avancé · 60–90 min hors des 2 heures obligatoires</div>
+<h3>Atelier B — Qdrant, métadonnées et génération sourcée</h3>
+<p>Nous réutilisons les mêmes 12 documents du TP 1, mais nous remplaçons FAISS par <strong>Qdrant</strong>. Les étudiants choisissent le terrain Industrie 4.0 ou Logistique &amp; services et apprennent à filtrer les recherches par domaine. La génération fonctionne avec un modèle léger dans Colab ; la version serveur utilise Ollama.</p>
+<div class="tp-actions"><a class="download-link" href="tp/TP2B_Qdrant_Ollama_Industrie_Logistique.ipynb" download>↓ Télécharger le notebook B (.ipynb)</a>
+<a class="colab-link" id="colabLaunchB" href="https://colab.research.google.com/#upload" target="_blank" rel="noopener noreferrer">↗ Ouvrir l'Atelier B dans Colab</a>
+<a class="download-link" href="tp/atelier-b-local/README.md">Variante locale / Ollama</a></div>
+<p class="tp-instruction" id="colabHelpB">Ouvrez le notebook dans Colab par import si le dépôt GitHub n'est pas encore publié. <strong>Colab : Qdrant en mémoire + Qwen via Transformers.</strong> <strong>PC/VM : Qdrant serveur + Ollama.</strong> La connexion à Ollama local n'est pas disponible depuis Colab sans mise en réseau supplémentaire.</p>
+</div>
+<div class="tp-stack"><div><strong>Master Industry 4.0</strong><p>Indexation des fiches PR-17, VB-04, M-12 et T-8. Requêtes sur diagnostic documentaire, versions et mesures ; distinguer documentation et télémétrie en temps réel.</p></div>
+<div><strong>Master Systèmes informatiques — Logistique et services</strong><p>Indexation de FEFO, procédures de réception, WMS et incidents de transport. Recherche avec filtres métier ; distinguer procédures et données de stock courantes.</p></div></div>
+<h3 class="overline" style="font-size:12px;margin:38px 0 7px">Atelier B guidé · exemples et discussion</h3>
+<section class="tp-guide" aria-label="Étapes guidées de cours2.html atelier 2">
+<div class="tp-guide-tools"><span class="tp-guide-kicker">Dépliez une étape pour explorer le code et le raisonnement</span><div class="tp-guide-controls"><button type="button" data-guide-action="open">Tout déplier</button><button type="button" data-guide-action="close">Tout replier</button></div></div>
+<div class="tp-guide-list">
+<details class="tp-guide-item" open>
+<summary><span class="tp-guide-index">01</span><span><strong class="tp-guide-title">Préparer le corpus et les chunks</strong><span class="tp-guide-subtitle">Réutiliser 12 fiches fictives, identifier les documents sources et leurs métadonnées.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Choisir le mode Qdrant adapté à Colab, puis comprendre la différence avec un serveur utilisé en production.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>QDRANT_BACKEND = &#x27;memory&#x27;   # Colab, sans Docker
+GENERATION_BACKEND = &#x27;transformers&#x27;
+# En local : QDRANT_BACKEND=&#x27;server&#x27; avec serveur autorisé</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Le client local stocke les vecteurs dans le processus ; le mode serveur permet un service partagé, mais nécessite une configuration et un contrôle d&#x27;accès.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Pourquoi une base locale en mémoire ne doit-elle pas être présentée comme une solution de production persistante ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">02</span><span><strong class="tp-guide-title">Vectoriser et créer la collection Qdrant</strong><span class="tp-guide-subtitle">Encoder les extraits, créer une collection cosinus et insérer points, payloads et IDs.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Créer des chunks avec leurs identifiants, domaines et titres pour conserver la traçabilité des résultats.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>MAX_MOTS = 75
+for doc in CORPUS[&#x27;documents&#x27;]:
+    parties = decouper_par_phrases(doc[&#x27;texte&#x27;], MAX_MOTS)
+    print(doc[&#x27;id&#x27;], &#x27;→&#x27;, len(parties), &#x27;passages&#x27;)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Contrôler les frontières de phrases ; un passage cité doit pouvoir être rattaché sans ambiguïté à sa fiche métier.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Quels champs de métadonnées faut-il transmettre à Qdrant pour filtrer et citer sans ambiguïté ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">03</span><span><strong class="tp-guide-title">Rechercher avec filtres de domaine</strong><span class="tp-guide-subtitle">Interroger le top-k en distinguant les deux masters ; comparer les résultats.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Encoder les passages puis vérifier la cohérence dimensionnelle avant l&#x27;indexation.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>from sentence_transformers import SentenceTransformer
+modele = SentenceTransformer(MODELE_EMBEDDING)
+exemple = modele.encode([&#x27;Procédure de maintenance industrielle&#x27;],
+                        normalize_embeddings=True)
+print(exemple.shape)</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>La dimension du vecteur est déterminée par l&#x27;encodeur ; une collection Qdrant doit utiliser cette même dimension.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Qu&#x27;arrive-t-il si l&#x27;on change de modèle d&#x27;embeddings sans reconstruire l&#x27;index ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">04</span><span><strong class="tp-guide-title">Générer et auditer les citations</strong><span class="tp-guide-subtitle">Construire les messages pour Qwen, tester une réponse sourcée et un cas sans réponse actuelle.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Interroger Qdrant en appliquant un filtre documentaire sur le master choisi.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code>PARCOURS = &#x27;industrie&#x27;  # ou &#x27;logistique&#x27;
+question = QUESTIONS_METIER[PARCOURS]
+preuves = rechercher_qdrant(question, k=3,
+                            domaine=DOMAINES[PARCOURS])
+print([(p[&#x27;document_id&#x27;], round(p[&#x27;score&#x27;], 3)) for p in preuves])</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Le filtre retire les documents hors domaine, mais ne garantit pas qu&#x27;un passage soit factuellement suffisant pour répondre.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Pourquoi un filtre de domaine n&#x27;est-il pas un mécanisme d&#x27;autorisation utilisateur ?</p></div></div></div></div></details>
+<details class="tp-guide-item" >
+<summary><span class="tp-guide-index">05</span><span><strong class="tp-guide-title">Comparer mémoire, FAISS et serveur</strong><span class="tp-guide-subtitle">Ouvrir la variante Docker + Ollama et identifier les changements de configuration.</span></span><span class="tp-guide-chevron" aria-hidden="true">＋</span></summary>
+<div class="tp-guide-body"><span class="tp-guide-label">Objectif et manipulation</span><p>Construire une réponse documentée et auditer les citations fournies par le LLM.</p>
+<div class="tp-guide-grid"><div class="tp-guide-block"><span class="tp-guide-label">Extrait de code Python · à utiliser dans le notebook</span>
+<div class="tp-code-wrap"><div class="tp-code-top"><span>Python / Colab</span><button class="tp-copy" type="button" aria-label="Copier cet extrait de code">Copier</button></div><pre><code># Après la cellule de génération du notebook
+print(&#x27;Passages utilisés :&#x27;, [p[&#x27;document_id&#x27;] for p in preuves])
+print(auditer_citations(reponse, preuves))</code></pre></div>
+<p class="tp-guide-stepmark">Extrait pédagogique : exécuter les cellules précédentes du notebook avant de l'utiliser.</p></div>
+<div class="tp-guide-block"><div class="tp-guide-note"><span class="tp-guide-label">Observer et interpréter</span><p>Vérifier si les citations apparaissent dans les passages réellement fournis ; noter aussi les affirmations non sourcées.</p></div>
+<div class="tp-guide-note discussion"><span class="tp-guide-label">Discussion scientifique / métier</span><p>Quelles différences fonctionnelles entre Qdrant local, FAISS et Qdrant serveur importent pour un assistant partagé ?</p></div></div></div></div></details>
+</div><div class="guide-linked-tools">Besoin de comprendre une bibliothèque ? <a href="outils.html">Consultez l’atlas des outils du RAG →</a></div></section>
+<div class="note hint"><b>Point métier.</b> La recherche filtrée par domaine n'est pas un mécanisme de sécurité : en production, les autorisations doivent être imposées par le serveur. Une citation n'est pas une validation de procédure opérationnelle.</div>
+<p class="tp-aside"><strong>Livrable :</strong> deux top-3 commentés, deux réponses sourcées, un test d'abstention, et un tableau comparatif FAISS / Qdrant local / Qdrant serveur.</p>
+</section>
 <button type="button" class="open-tp-mini" data-open-pane="cours">← Revenir au cours théorique</button>
 </article></div></section></div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Rechercher dans le cours"><div class="search-box"><div class="controls" style="justify-content:space-between;margin:0 0 11px"><strong>Rechercher une notion</strong><button class="icon-btn" id="searchClose" aria-label="Fermer la recherche">✕</button></div><input id="searchInput" type="search" placeholder="top-k, contexte, citations, LLM, prompt…" aria-label="Recherche dans le cours"><div class="search-results" id="searchResults"></div></div></div>
@@ -335,6 +505,12 @@ $$('[data-open-pane]').forEach(b=>b.addEventListener('click',()=>activatePane(b.
 // À remplir uniquement après publication effective sur GitHub ou autre hôte compatible Colab.
 const configuredColabNotebookUrl='https://colab.research.google.com/github/benlahmar/RAG_Cours_Ateliers/blob/main/tp/TP2_RAG_complet_Industrie_Logistique.ipynb';
 if(configuredColabNotebookUrl){$('#colabLaunch').href=configuredColabNotebookUrl;$('#colabHelp').textContent='Ouvre directement le notebook du TP 2 hébergé en ligne.'}
+const atelierBColabUrl='https://colab.research.google.com/github/benlahmar/RAG_Cours_Ateliers/blob/main/tp/TP2B_Qdrant_Ollama_Industrie_Logistique.ipynb';
+if(atelierBColabUrl){$('#colabLaunchB').href=atelierBColabUrl;$('#colabHelpB').textContent='Le notebook B s’ouvre directement depuis GitHub. Colab utilise Qdrant en mémoire et Qwen via Transformers ; Ollama s’utilise sur PC ou VM locale.'}
+function choisirAtelier(n){for(const i of ['a','b']){let a=i===n,tab=$('#tabAtelier'+i.toUpperCase()),panel=$('#atelier'+i.toUpperCase());tab.setAttribute('aria-selected',String(a));panel.hidden=!a;}try{sessionStorage.setItem('rag-tp2-atelier',n)}catch{}}
+$$('[data-atelier]').forEach(btn=>btn.addEventListener('click',()=>choisirAtelier(btn.dataset.atelier)));
+let initialAtelier='a';try{initialAtelier=sessionStorage.getItem('rag-tp2-atelier')||'a'}catch{}choisirAtelier(initialAtelier==='b'?'b':'a');
+
 if(safeGet('rag-theme','light')==='dark')body.classList.add('dark');let scale=Number(safeGet('rag-font','1'));if(!Number.isFinite(scale))scale=1;scale=Math.max(.9,Math.min(1.25,scale));document.documentElement.style.setProperty('--reading-scale',scale);
 $('#themeBtn').addEventListener('click',()=>{body.classList.toggle('dark');safeSet('rag-theme',body.classList.contains('dark')?'dark':'light')});
 $('#textUp').addEventListener('click',()=>{scale=Math.min(1.25,Math.round((scale+.05)*100)/100);document.documentElement.style.setProperty('--reading-scale',scale);safeSet('rag-font',String(scale))});
@@ -373,4 +549,25 @@ const chunkScenarios={
 };
 const chSel=document.getElementById('chunkChoice');
 if(chSel){const renderChunks=()=>{const data=chunkScenarios[chSel.value];document.getElementById('chunkFragments').innerHTML=data.parts.map((t,i)=>'<div class="fragment"><small>Fragment '+(i+1)+'</small>'+t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')+'</div>').join('');document.getElementById('chunkExplain').textContent=data.desc;};chSel.addEventListener('change',renderChunks);renderChunks();}
-</script></body></html>
+</script><script>
+(function(){
+  document.addEventListener('click',async function(ev){
+    const toggle=ev.target.closest('[data-guide-action]');
+    if(toggle){
+      const guide=toggle.closest('.tp-guide');
+      if(!guide)return;
+      const open=toggle.dataset.guideAction==='open';
+      guide.querySelectorAll('details.tp-guide-item').forEach(d=>d.open=open);
+      return;
+    }
+    const copy=ev.target.closest('.tp-copy');
+    if(!copy)return;
+    const pre=copy.closest('.tp-code-wrap')?.querySelector('code');
+    if(!pre)return;
+    try{await navigator.clipboard.writeText(pre.textContent);copy.textContent='Copié ✓'}
+    catch(e){copy.textContent='Sélectionnez le code pour copier'}
+    setTimeout(()=>{copy.textContent='Copier'},1500);
+  });
+})();
+</script>
+</body></html>
